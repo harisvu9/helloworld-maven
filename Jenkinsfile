@@ -5,14 +5,14 @@ node {
 
   stage('build'){
     dir('my-app'){
-      sh 'mvn clean install'
+      sh 'mvn clean install sonar:sonar'
     }
   }
-  stage('sonar'){
-    dir('my-app'){
-      sh 'mvn sonar:sonar'
-    }
-  }
+  // stage('sonar'){
+  //   dir('my-app'){
+  //     sh 'mvn sonar:sonar'
+  //   }
+  // }
   //stage('package'){
   //  sh 'echo "Jenkinsfile"'
   //}
