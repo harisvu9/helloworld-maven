@@ -10,7 +10,7 @@ node {
   }
   stage('sonar'){
     dir('${WORKSPACE}/my-app'){
-      sh 'mvn sonar:sonar
+      sh 'mvn sonar:sonar'
     }
   }
   stage('package'){
