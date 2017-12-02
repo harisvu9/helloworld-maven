@@ -13,10 +13,10 @@ node {
       sh 'mvn sonar:sonar'
     }
   }
-  stage('package'){
-    sh 'echo "Jenkinsfile"'
-  }
+  //stage('package'){
+  //  sh 'echo "Jenkinsfile"'
+  //}
   stage('deploy'){
-    sh 'echo "Jenkinsfile"'
+    sh 'java -cp target/my-app-1.0-SNAPSHOT.jar com.mycompany.app.App'
   }
 }
