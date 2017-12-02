@@ -17,6 +17,7 @@ node {
   //  sh 'echo "Jenkinsfile"'
   //}
   stage('deploy'){
-    sh 'java -cp my-app/target/my-app-1.0-SNAPSHOT.jar com.mycompany.app.App'
+    dir('my-app'){
+    sh 'java -cp target/my-app-1.0-SNAPSHOT.jar com.mycompany.app.App'
   }
 }
