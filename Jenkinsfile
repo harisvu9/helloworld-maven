@@ -4,7 +4,7 @@ node {
   }
 
   stage('build'){
-    dir('${WORKSPACE}/my-app'){
+    dir('my-app'){
       sh 'mvn clean install'
     }
   }
